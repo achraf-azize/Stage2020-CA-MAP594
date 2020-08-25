@@ -1,0 +1,22 @@
+assessor:
+  builtinAssessorName: Medianstop
+  classArgs:
+    optimize_mode: maximize
+    start_step: 5
+authorName: default
+experimentName: benchmark_deep_pytorch
+maxExecDuration: 30m
+maxTrialNum: 100
+searchSpacePath: search_space.json
+trainingServicePlatform: local
+trial:
+  codeDir: .
+  command: python model_script.py N:\Projets01\MLBox\AutoML_datasets_for_MLBox\Financial_public_datasets\CA_public_datasets\banking-dataset-marketing-targets\train.csv
+    subscribed
+  gpuNum: 0
+trialConcurrency: 1
+tuner:
+  builtinTunerName: TPE
+  classArgs:
+    optimize_mode: maximize
+useAnnotation: false
